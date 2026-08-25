@@ -53,8 +53,8 @@ bun --version
 Clone the repository and install dependencies using Bun:
 
 ```bash
-git clone https://github.com/your-username/aura-monster.git
-cd aura-monster
+git clone https://github.com/GamerJagdish/Aura-Monster.git
+cd Aura-Monster
 bun install
 ```
 

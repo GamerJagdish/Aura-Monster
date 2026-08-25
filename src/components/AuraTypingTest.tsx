@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { Scene3D } from '@/lib/scene3d';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Settings, Volume2, VolumeX, RotateCcw, X, ChevronDown } from 'lucide-react';
+import { Settings, Volume2, VolumeX, RotateCcw, X, ChevronDown, Github } from 'lucide-react';
 
 const TYPING_TEXTS = [
   "The aura that surrounds him grows stronger with every step he takes upward. Each stair is a testament to his unyielding determination. The higher he climbs, the more the world trembles beneath his presence. This is the path of the aura monster, the one who defies destiny itself and carves his own fate into the very fabric of reality.",
@@ -765,6 +765,25 @@ export default function AuraTypingTest() {
             >
               {gameMode === 'return-by-death' ? 'FACE DESTINY' : 'BEGIN THE ASCENT'}
             </motion.button>
+
+            {/* GitHub Footer Link on Start Screen */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.9 }}
+              className="absolute bottom-6 flex items-center gap-2 pointer-events-auto"
+            >
+              <a
+                href="https://github.com/GamerJagdish/Aura-Monster"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white/40 hover:text-white/80 text-xs transition-colors group"
+                style={{ fontFamily: `${bodyFont}, sans-serif` }}
+              >
+                <Github size={14} className="transition-transform group-hover:scale-110 text-white/40 group-hover:text-cyan-400" />
+                <span>GamerJagdish/Aura-Monster</span>
+              </a>
+            </motion.div>
           </motion.div>
         )}
       </AnimatePresence>
@@ -1066,6 +1085,22 @@ export default function AuraTypingTest() {
                     </AnimatePresence>
                   </div>
                 </div>
+
+                {/* GitHub link in Settings */}
+                <a
+                  href="https://github.com/GamerJagdish/Aura-Monster"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center gap-2 px-4 py-2 mb-3 bg-white/5 hover:bg-white/15 border border-white/10 hover:border-cyan-500/40 text-white/70 hover:text-white font-semibold text-xs transition-all group"
+                  style={{
+                    fontFamily: `${bodyFont}, sans-serif`,
+                    clipPath:
+                      'polygon(0 0, calc(100% - 6px) 0, 100% 6px, 100% 100%, 6px 100%, 0 calc(100% - 6px))',
+                  }}
+                >
+                  <Github size={14} className="transition-transform group-hover:scale-110 group-hover:text-cyan-400" />
+                  <span>GitHub Repository</span>
+                </a>
 
                 {/* Reset button */}
                 <button
